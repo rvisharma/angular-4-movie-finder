@@ -1,0 +1,11 @@
+<section *ngIf="movies.length">
+  <form action="">
+    <ul>
+      <li *ngFor="let movie of movies; let i = index">
+        <input type="radio" name="selectedMovie" id="movie-{{i}}" (click)="onMovieSelect(movie)">
+        <label for="movie-{{i}}">{{movie.Title}} ({{movie.Year}})</label>
+      </li>
+    </ul>
+    <button (click)="onLoadMore()" *ngIf="showLoadMore" >Show More</button>
+  </form>
+</section>

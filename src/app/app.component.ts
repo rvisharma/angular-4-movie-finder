@@ -3,12 +3,14 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-  <h1>
-    {{title}}
-  </h1>
+  <h1>Nav bar here</h1>
+  <section><app-movie></app-movie></section>
   `,
-  styles: []
+  styles: [`
+    body:{
+      background-color:red;
+    }
+  `]
 })
 export class AppComponent {
-  title = 'app works!';
 }

@@ -52,6 +52,10 @@
   },
   "defaults": {
     "styleExt": "sass",
-    "component": {}
+    "component": {
+      "inlineStyle": false,
+      "inlineTemplate": false,
+      "spec": false
+    }
   }
 }

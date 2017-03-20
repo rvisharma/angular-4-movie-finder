@@ -1,0 +1,12 @@
+<form (submit)="search.value && searchMovie(search.value)">
+  <p>
+    <label for="title">Enter Movie Title</label><br>
+    <input type="text" id="title" #search>
+    <button type="submit">Search</button>
+  </p>
+</form>
+<section *ngIf="totalResults">
+  <h4>Total Results - {{totalResults}}</h4>
+</section>
+<app-movie-list [movies]="movies" (selectMovie)="onMovieSelect($event)" [showLoadMore]="showLoadMore" (loadMore)="onLoadMore()"></app-movie-list>
+<app-movie-mini-detail [movie]="selectedMovie"></app-movie-mini-detail>

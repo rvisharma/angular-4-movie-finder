@@ -1,0 +1,6 @@
+<div *ngIf="movie">
+  Selected movie - {{movie.Title}}
+  <h3>{{movie.Title}}</h3>
+  Year - {{movie.Year}}
+  <img [src]="movie.Poster" alt="movie.Title" *ngIf="isValidUrl(movie.Poster)">
+</div>
