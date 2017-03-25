@@ -1,12 +1,20 @@
-<form (submit)="search.value && searchMovie(search.value)">
-  <p>
-    <label for="title">Enter Movie Title</label><br>
-    <input type="text" id="title" #search>
-    <button type="submit">Search</button>
-  </p>
-</form>
-<section *ngIf="totalResults">
-  <h4>Total Results - {{totalResults}}</h4>
-</section>
-<app-movie-list [movies]="movies" (selectMovie)="onMovieSelect($event)" [showLoadMore]="showLoadMore" (loadMore)="onLoadMore()"></app-movie-list>
-<app-movie-mini-detail [movie]="selectedMovie"></app-movie-mini-detail>
+<div class="row">
+  <div class="col-xs-12 col-md-6">
+    <div class="form-block">
+      <form (submit)="search.value && searchMovie(search.value)">
+        <p class="form-group">
+          <label for="title">Enter Movie Title</label><br>
+          <input type="text" id="title" #search>
+        </p>
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </div>
+    <section *ngIf="totalResults">
+      <h4>Total Results - {{totalResults}}</h4>
+    </section>
+    <app-movie-list [movies]="movies" (selectMovie)="onMovieSelect($event)" [showLoadMore]="showLoadMore" (loadMore)="onLoadMore()"></app-movie-list>
+  </div>
+  <div class="col-xs-12 col-md-4">
+    <app-movie-mini-detail [movie]="selectedMovie"></app-movie-mini-detail>
+  </div>
+</div>

@@ -1,6 +1,18 @@
-<div *ngIf="movie">
-  Selected movie - {{movie.Title}}
+<!--<div *ngIf="movie">
   <h3>{{movie.Title}}</h3>
   Year - {{movie.Year}}
   <img [src]="movie.Poster" alt="movie.Title" *ngIf="isValidUrl(movie.Poster)">
+</div>-->
+<!---->
+<div class="card" *ngIf="movie">
+  <div class="card-header">
+    {{movie.Title}}
+  </div>
+  <div class="card-img">
+    <img class=".img-thumbnail" [src]="movie.Poster" alt="movie.Title" *ngIf="isValidUrl(movie.Poster)">
+    <!--<img alt="movie.Title" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTU2NjA1ODgzMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@._V1_SX300.jpg" title="" style="cursor: -webkit-zoom-in;">-->
+  </div>
+  <div class="card-footer">
+    <a href="/" class="btn btn-primary">Details</a>
+  </div>
 </div>

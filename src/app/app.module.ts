@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { ClarityModule } from 'clarity-angular';
+
 import { AppComponent } from './app.component';
 import { MovieComponent } from './movie/movie.component';
 import { MovieListComponent } from './movie/movie-list/movie-list.component';
@@ -18,7 +20,8 @@ import { MovieMiniDetailComponent } from './movie/movie-mini-detail/movie-mini-d
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ClarityModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

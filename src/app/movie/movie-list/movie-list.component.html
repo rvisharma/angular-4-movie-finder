@@ -1,11 +1,15 @@
 <section *ngIf="movies.length">
-  <form action="">
-    <ul>
+  <div class="movie-list">
+    <ul class="list-unstyled">
       <li *ngFor="let movie of movies; let i = index">
-        <input type="radio" name="selectedMovie" id="movie-{{i}}" (click)="onMovieSelect(movie)">
-        <label for="movie-{{i}}">{{movie.Title}} ({{movie.Year}})</label>
+        <div class="radio">
+          <input type="radio" name="selectedMovie" id="movie-{{i}}" (click)="onMovieSelect(movie)">
+          <label for="movie-{{i}}">{{movie.Title}} ({{movie.Year}})</label>
+        </div>
       </li>
     </ul>
-    <button (click)="onLoadMore()" *ngIf="showLoadMore" >Show More</button>
-  </form>
+  </div>
+  <button (click)="onLoadMore()" *ngIf="showLoadMore" class="btn btn-primary">
+    Show More
+    </button>
 </section>
